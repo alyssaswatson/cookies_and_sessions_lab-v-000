@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
 
   def cart
     session[:cart_id] = @cart.id
- 
-  # load the cart referenced in the session
     @cart = session[:cart_id]
   end
 end
