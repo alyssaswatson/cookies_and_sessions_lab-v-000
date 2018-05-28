@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
 
   def add
     @item = Item.find(params[:id])
-
 # Load the cart from the session, or create a new empty cart.
     cart = session[:cart] || []
     cart << @item.id
