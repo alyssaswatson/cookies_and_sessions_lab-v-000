@@ -7,10 +7,9 @@ class ProductsController < ApplicationController
   def add
     @product = params[:product]
 # Load the cart from the session, or create a new empty cart.
-    cart = session[:cart] || []
-    cart << @product.id
+    cart << @product
 
 # Save the cart in the session.
-    session[:cart] = cart
+    render :index
   end
 end
